@@ -2,6 +2,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class group {
+    int opt;
+    int evenSum;
+    int oddSum;
+
     public static void main(String[] args) {
         int[] lisOfNumbers = new int[5];
         Random random = new Random();
@@ -10,6 +14,8 @@ public class group {
             lisOfNumbers[i] = random.nextInt(100);
             System.out.println(lisOfNumbers[i] + " ");
         }
+
+        
 
     }
 
@@ -25,10 +31,23 @@ public class group {
             Scanner input = new Scanner(System.in);
             System.out.println("Select an option: ");
             int opt = input.nextInt();
-
         }while(opt != 5);
-
     }
+
+    public void sumOf(int[] listNum){
+        for(int i = 0; i < listNum.length; i++){
+            if(listNum[i] % 2 == 0){
+                evenSum += listNum[i];
+            }
+            else{
+                oddSum += listNum[i];
+            }
+        }
+        System.out.printf("\nSum of even numbers: %d",evenSum);
+        System.out.printf("\nSum of even numbers: %d",oddSum);
+    }
+
+
 
 
 }
