@@ -47,6 +47,25 @@ public class group {
         System.out.printf("\nSum of even numbers: %d",oddSum);
     }
 
+    public void findMaximum(int[] number) {
+        int maxValue = Integer.MIN_VALUE;
+        for (int i = 0; i < number.length; i++) {
+            if (number[i] > maxValue) {
+                maxValue = number[i];
+            }
+        }
+        System.out.println("Maximum value of array is " + maxValue);
+    }
+    
+    public void findMinumum(int[] number) {
+        int minValue = Integer.MAX_VALUE;
+        for (int i = 0; i < number.length; i++) {
+            if (number[i] < minValue) {
+                minValue = number[i];
+            }
+        }
+        System.out.println("Minumum value of array is " + minValue);
+    }
 
 
 
