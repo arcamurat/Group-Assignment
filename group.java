@@ -67,6 +67,43 @@ public class group {
         System.out.println("Minumum value of array is " + minValue);
     }
 
+    public int[] differenceFromAverage(int[] givenArray){
+        int[]differenceArray = new int[givenArray.length];
+        int total =0;
+        int average = 0;
+
+            for(int i =0; i<givenArray.length;i++){
+            total = total + givenArray[i];
+            }
+        average = total/givenArray.length;
+
+            for(int i =0; i<givenArray.length;i++){
+                differenceArray[i] = givenArray[i] - average;
+            }
+        return differenceArray;
+        }
+
+        public int sumOfEvenIndexes (int[] givenArray){
+        int sumOfEvenIndex = 0;
+        
+        for(int i =0; i<givenArray.length;i++){
+            if(i%2 == 0){
+                sumOfEvenIndex = sumOfEvenIndex+givenArray[i];
+            }
+        }
+        return sumOfEvenIndex;
+        }
+
+    public int sumOfOddIndexes (int[] givenArray){
+        int sumOfOddIndex = 0;
+        for(int i =0; i<givenArray.length;i++){
+            if(i%2 == 1){
+                sumOfOddIndex = sumOfOddIndex+givenArray[i];
+            }
+        }
+        return sumOfOddIndex;
+    }
+
 
 
 }
